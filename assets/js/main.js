@@ -86,4 +86,4 @@ btnEntfernen.addEventListener("click", (e) => {
     liste.remove(liste.selectedIndex);
     console.log(liste)
 
-}); */
+});  */

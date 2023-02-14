@@ -14,6 +14,14 @@ remove()
 const btnSelect = document.querySelector("#farbeAuswahlen")
 console.log(btnSelect); // alle 
 
+const btnEntfernen = document.querySelector("#button");
+console.log(btnSelect)
+
+
+
+
+// Szenario 1    // geht nicht richtig 
+                
 btnSelect.addEventListener("change", (e) => {
     e.preventDefault();
 
@@ -25,12 +33,10 @@ btnSelect.addEventListener("change", (e) => {
     console.log(btnSelect.options[btnSelectIndex].text); // zeigt text an
     console.log(btnSelect.options[btnSelectIndex]); // zeigt value a
 
-    const btnEntfernen = document.querySelector("#button");
     console.log(btnEntfernen);
     btnEntfernen.addEventListener("click", (e) => {
         e.preventDefault();
 
-        console.log(btnSelect)
         console.log(btnSelectIndex)
         switch (btnSelectIndex) {
             case 0:
@@ -70,3 +76,14 @@ btnSelect.addEventListener("change", (e) => {
 });
 
 
+/* // Sezenario 2 
+const liste = document.querySelector("#farbeAuswahlen");
+console.log(liste);
+
+btnEntfernen.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(liste.selectedIndex); // 0 
+    liste.remove(liste.selectedIndex);
+    console.log(liste)
+
+}); */
